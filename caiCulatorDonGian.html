@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator đơn giản</title>
+  <style>
+    td input{
+      height: 35px;
+      width: 35px;
+    }
+  </style>
+</head>
+<body>
+<form>
+  <table>
+    <tr>
+      <th colspan="4">
+        <input type="text" id="display" name="display">
+      </th>
+    </tr>
+    <tr>
+      <td> <input type="button" name="so1" value=" 1 " onclick="num1(1)"> </td>
+      <td> <input type="button" name="so2" value=" 2 " onclick="num1(2)"> </td>
+      <td> <input type="button" name="so3" value=" 3 " onclick="num1(3)"> </td>
+      <td> <input type="button" name="Adi" value=" + " onclick="num1('+')"> </td>
+
+    </tr>
+
+    <tr>
+      <td> <input type="button" name="so4" value=" 4 " onclick="num1(4)"> </td>
+      <td> <input type="button" name="so5" value=" 5 " onclick="num1(5)"> </td>
+      <td> <input type="button" name="so6" value=" 6 " onclick="num1(6)"> </td>
+      <td> <input type="button" name="Sub" value=" - " onclick="num1('-')"> </td>
+
+    </tr>
+
+    <tr>
+      <td> <input type="button" name="so1" value=" 7 " onclick="num1(7)"> </td>
+      <td> <input type="button" name="so2" value=" 8 " onclick="num1(8)"> </td>
+      <td> <input type="button" name="so3" value=" 9 " onclick="num1(9)"> </td>
+      <td> <input type="button" name="Mul" value=" x " onclick="num1('x')"> </td>
+
+    </tr>
+
+    <tr>
+      <td> <input type="button" name="so1" value=" C " onclick="clr()"> </td>
+      <td> <input type="button" name="so2" value=" 0 " onclick="num1(0)"> </td>
+      <td> <input type="button" name="so3" value=" = " onclick="equal('=')"> </td>
+      <td> <input type="button" name="Div" value=" / " onclick="num1('/')"> </td>
+
+    </tr>
+
+  </table>
+</form>
+<script>
+  function num1(val){
+    document.getElementById('display').value += val;
+  }
+  function equal(){
+    document.getElementById('display').value = eval(display.value);
+  }
+  function clr(){
+    document.getElementById('display').value = '';
+  }
+</script>
+
+</body>
+</html>
