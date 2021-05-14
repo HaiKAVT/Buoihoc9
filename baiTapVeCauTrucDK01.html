@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Tập về điều kiện 01</title>
+</head>
+<body>
+<script>
+  let alert = parseInt(prompt( 'chọn 1 : kiểm tra a/ b ? ; chọn 2 : kiểm tra hs đủ tuổi vào lớp 10, nhập 3 : so sanh n với 0, ' +
+          'nhập 4 : tìm giá trị lớn nhất của 3 số, nhập 5: xếp hàng học lực của hs, nhập 6 : Tính hoa hồng, nhập 7 : ' +
+          'tính cước điện thoại'));
+  if(alert==1){
+    let a = parseInt(prompt('nhập vào số a :'));
+    let b = parseInt(prompt('nhập vào số b :'));
+    if(a&b==0){
+     document.write("a chia hết cho b");
+    } else
+      document.write("a ko chia hết cho b");
+  }
+
+  if(alert ==2){
+    let tuoi = parseInt(prompt('nhập tuổi của học sinh : '));
+    if(tuoi>=15){
+      document.write('học sinh đủ tuổi vào lớp 10');
+    }else
+      document.write('học sinh ko đủ tuổi');
+  }
+  if(alert==3){
+    let n = parseInt(prompt('nhập vào một số nguyên bất kỳ khác 0 : '));
+    if(n<0){
+      document.write('n là số bé hơn 0');
+    } else
+      document.write('n là số lớn hơn 0 ');
+  }
+  if(alert==4){
+    let a = parseInt(prompt('nhập vào a: '));
+    let b = parseInt(prompt('nhập vào b :'));
+    let c = parseInt(prompt('nhập vào c : '));
+    let max = a;
+    if(max>b && max>c){
+      document.write('max là ' + max );
+    } if(max<b && b>c ){
+      document.write('max là ' + b);
+
+    } if(max < c && b < c){
+      document.write('max là ' + c);
+    }
+  }
+  if(alert==5){
+    let diem = parseInt(prompt('nhập vào điểm học kỳ của học sinh : '));
+    if(diem < 6){
+      document.write('học sinh trung bình');
+    }else if(diem <8){
+      document.write('học sinh khá');
+    }else
+      document.write('học sinh giỏi');
+  }
+  if(alert==6){
+    let doanhso = parseInt(prompt('nhập vào doanh số của bạn : '));
+    let hoahong;
+    if(doanhso < 100){
+     hoahong = doanhso*5/100;
+     document.write('hoa hong cua bạn là : ' + hoahong);
+    }else if(doanhso < 500){
+        hoahong = doanhso*15/100;
+        document.write('hoa hong cua bạn là : ' + hoahong);
+    } else{
+        hoahong = doanhso*25/100;
+        document.write('hoa hồng của bạn là : ' + hoahong)
+    }
+
+  }
+  if(alert==7){
+      let soPhut = parseInt(prompt(' nhập vào số  phút bạn đã gọi đi trong tháng : '));
+      let soTien;
+      if(soPhut<50){
+          soTien = soPhut*1200;
+          document.write('số tiền bạn phải thanh toán là : ' + soTien);
+      }else if(soPhut<100){
+          soTien = ((soPhut-50)*1500 + 50*1200);
+          document.write('số tiền bạn phải trả là : ' + soTien);
+      } else {
+          soTien = (((soPhut-50)*1500 + 50*1200) + ((soPhut-100)*2000));
+          document.write('số tiền bạn phải trả là : ' + soTien);
+      }
+  }
+
+</script>
+</body>
+</html>
